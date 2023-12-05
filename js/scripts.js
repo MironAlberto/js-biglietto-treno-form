@@ -21,7 +21,7 @@ buttonForm.addEventListener("submit", function(evento){
     
     }
     
-    else if (kmInNumero > 65) {
+    else if (etaInNumero > 65) {
         fullPrice = (kmCost * kmInNumero) - ((kmCost * kmInNumero) * 40) / 100;
     }
 
