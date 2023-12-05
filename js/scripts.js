@@ -1,9 +1,13 @@
 
+const name = document.getElementById("name");
 const km = document.getElementById("km");
 const eta = document.getElementById("eta");
 const buttonTicket = document.getElementById("button-ticket");
+const buttonForm = document.querySelector("form");
 
-buttonTicket.addEventListener("click", function(){
+buttonForm.addEventListener("submit", function(evento){
+
+    evento.preventDefault();
 
     const etaInNumero = parseInt(eta.value);
     const kmInNumero = parseInt(km.value);
@@ -24,5 +28,9 @@ buttonTicket.addEventListener("click", function(){
     fullPrice = fullPrice.toFixed(2);
 
     console.log('fullPrice', fullPrice, typeof fullPrice);
+
+    const resultTicket = document.querySelector('h2');
+    resultTicket.innerHTML = 'Il prezzo totale del tuo biglietto è di ' + fullPrice + ' €';
+
 });
 
